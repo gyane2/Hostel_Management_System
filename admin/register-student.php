@@ -155,7 +155,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Middle Name</h4>
                                         <div class="form-group">
-                                            <input type="text" name="mname" id="mname" placeholder="Enter Middle Name" required class="form-control">
+                                            <input type="text" name="mname" id="mname" placeholder="Enter Middle Name" class="form-control">
                                         </div>
                                 </div>
                             </div>
@@ -196,7 +196,9 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Contact Number</h4>
                                         <div class="form-group">
-                                            <input type="number" name="contact" id="contact" placeholder="Your Contact" required="required" class="form-control">
+                                            <input   type="number" name="contact" id="contact" placeholder="Your Contact" required="required" class="form-control"pattern="[0,9]{3}-[0,9]{3}-[0,9]{4}" aria-placeholder="123-123-1234">
+                                             
+                                              
                                         </div>
                                 </div>
                             </div>
