@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #6f6565;
+      
+    }
+    .contact-panel {
+      max-width: 1200px;
+      margin: 60px auto;
+      background-color: #ffefefcd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .contact-info {
+      margin-top: 20px;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .map-container {
+      margin-top: 20px;
+      height: 200px;
+      background-color: #ddd; /* Placeholder for map */
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-panel">
+    <h2>Contact Us</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis quasi deserunt cumque nulla nostrum laborum exercitationem maiores temporibus, quae quidem explicabo autem odit! Temporibus animi dignissimos voluptates ipsa consequatur!
+    <div class="contact-info">
+       
+      <p><strong>Phone:</strong> +977 9821212332</p>
+      <p><strong>Email:</strong> <a href="mailto:alpen750@gmail.com">alpen750@gmail.com</a></p>
+      <p><strong>Address:</strong> Naxal, Kathmandu, Nepal</p>
+    </div>
+    <div class="map-container" id="map"></div>
+  </div>
+
+  <!-- Replace the 'YOUR_API_KEY' with your Google Maps API Key -->
+  <!-- Make sure you enable the Maps JavaScript API in your Google Cloud Console -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script>
+    function initMap() {
+  var mapOptions = {
+    center: {lat: 27.7172, lng: 85.3240}, // Kathmandu coordinates
+    zoom: 12
+  };
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
