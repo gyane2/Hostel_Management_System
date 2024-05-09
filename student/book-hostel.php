@@ -159,133 +159,129 @@
                     </div>
 
                 
-                <div class="row">
-
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Room Number</h4>
-                                    <div class="form-group mb-4">
-                                        <select class="custom-select mr-sm-2" name="room" id="room" onChange="getSeater(this.value);" onBlur="checkAvailability()" required id="inlineFormCustomSelect">
-                                            <option selected>Select...</option>
-                                            <?php $query ="SELECT * FROM rooms";
-                                            $stmt2 = $mysqli->prepare($query);
-                                            $stmt2->execute();
-                                            $res=$stmt2->get_result();
-                                            while($row=$res->fetch_object())
-                                            {
-                                            ?>
-                                            <option value="<?php echo $row->room_no;?>"> <?php echo $row->room_no;?></option>
-                                            <?php } ?>
-                                        </select>
-                                        <span id="room-availability-status" style="font-size:12px;"></span>
-                                    </div>
-                              
-                            </div>
-                        </div>
+                    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Room Number</h4>
+                    <div class="form-group mb-4">
+                        <select class="custom-select mr-sm-2" name="room" id="room" onChange="getSeater(this.value);" onBlur="checkAvailability()" required id="inlineFormCustomSelect">
+                            <option selected>Select...</option>
+                            <?php $query ="SELECT * FROM rooms";
+                            $stmt2 = $mysqli->prepare($query);
+                            $stmt2->execute();
+                            $res=$stmt2->get_result();
+                            while($row=$res->fetch_object())
+                            {
+                            ?>
+                            <option value="<?php echo $row->room_no;?>"> <?php echo $row->room_no;?></option>
+                            <?php } ?>
+                        </select>
+                        <span id="room-availability-status" style="font-size:12px;"></span>
                     </div>
-<!-- By CodeAstro - codeastro.com -->
-                
- 
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Start Date</h4>
-                                    <div class="form-group">
-                                        <input type="date" name="stayf" id="stayf" class="form-control" required>
-                                    </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Seater</h4>
-                                    <div class="form-group">
-                                        <input type="text" id="seater" name="seater" placeholder="Enter Seater No." required class="form-control">
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Total Duration</h4>
-                                    <div class="form-group mb-4">
-                                        <select class="custom-select mr-sm-2" id="duration" name="duration">
-                                            <option selected>Choose...</option>
-                                            <option value="1">One Month</option>
-                                            <option value="2">Two Month</option>
-                                            <option value="3">Three Month</option>
-                                            <option value="4">Four Month</option>
-                                            <option value="5">Five Month</option>
-                                            <option value="6">Six Month</option>
-                                            <option value="7">Seven Month</option>
-                                            <option value="8">Eight Month</option>
-                                            <option value="9">Nine Month</option>
-                                            <option value="10">Ten Month</option>
-                                            <option value="11">Eleven Month</option>
-                                            <option value="12">Twelve Month</option>
-                                        </select>
-                                    </div>
-                              
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                        <div class="card-body">
-                                <h4 class="card-title">Food Status</h4>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" value="1" name="foodstatus"
-                                        class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Required <code>Extra $211 Per Month</code></label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" value="0" name="foodstatus"
-                                        class="custom-control-input" checked>
-                                    <label class="custom-control-label" for="customRadio2">Not Required</label>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Total Fees Per Month</h4>
-                                    <div class="form-group">
-                                        <input type="text" name="fpm" id="fpm" placeholder="Your total fees" class="form-control">
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Total Amount</h4>
-                                    <div class="form-group">
-                                        <input type="text" name="ta"  id="ta" placeholder="Total Amount here.." required class="form-control">
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                
                 </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Start Date</h4>
+                    <div class="form-group">
+                        <input type="date" name="stayf" id="stayf" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Seater</h4>
+                    <div class="form-group">
+                        <input type="text" id="seater" name="seater" placeholder="Enter Seater No." required class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Total Duration</h4>
+                    <div class="form-group mb-4">
+                        <select class="custom-select mr-sm-2" id="duration" name="duration" onchange="updateTotalAmount()">
+                            <option selected>Choose...</option>
+                            <option value="1">One Month</option>
+                            <option value="2">Two Month</option>
+                            <option value="3">Three Month</option>
+                            <option value="4">Four Month</option>
+                            <option value="5">Five Month</option>
+                            <option value="6">Six Month</option>
+                            <option value="7">Seven Month</option>
+                            <option value="8">Eight Month</option>
+                            <option value="9">Nine Month</option>
+                            <option value="10">Ten Month</option>
+                            <option value="11">Eleven Month</option>
+                            <option value="12">Twelve Month</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Food Status</h4>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" value="1" name="foodstatus"
+                            class="custom-control-input" onchange="updateTotalAmount()">
+                        <label class="custom-control-label" for="customRadio1">Required <code>Extra $211 Per Month</code></label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" value="0" name="foodstatus"
+                            class="custom-control-input" checked onchange="updateTotalAmount()">
+                        <label class="custom-control-label" for="customRadio2">Not Required</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Total Fees Per Month</h4>
+                    <div class="form-group">
+                        <input type="text" name="fpm" id="fpm" placeholder="Your total fees" class="form-control" onchange="updateTotalAmount()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Total Amount</h4>
+                    <div class="form-group">
+                        <input type="text" name="ta"  id="ta" placeholder="Total Amount here.." required class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTotalAmount() {
+            var duration = parseInt(document.getElementById('duration').value);
+            var fees = parseFloat(document.getElementById('fpm').value);
+            var foodStatus = parseFloat(document.querySelector('input[name="foodstatus"]:checked').value);
+            var total = duration * fees + foodStatus * duration * 211;
+            document.getElementById('ta').value = total.toFixed(2);
+        }
+    </script>
 
                 <h4 class="card-title mt-5">Student's Personal Information</h4>
 
@@ -389,15 +385,30 @@
                     <?php }?>
 
                     <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Emergency Contact Number</h4>
-                                    <div class="form-group">
-                                        <input type="number" name="econtact" id="econtact" class="form-control" required>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Emergency Contact Number</h4>
+            <div class="form-group">
+                <input type="text" name="econtact" id="econtact" class="form-control" placeholder="Enter Emergency Contact No." required oninput="validateEPhoneNumber(this)" maxlength="10">
+                <span id="error-msg" style="color: red;"></span>
+            </div>
+            <script>
+    function validatePhoneNumber(input) {
+        var phoneNumber = input.value;
+        var errorMsg = document.getElementById("error-msg");
+        if (phoneNumber.length !== 10 || isNaN(phoneNumber)) {
+            errorMsg.textContent = "Please enter a 10-digit phone number";
+        } else {
+            errorMsg.textContent = "";
+        }
+    }
+</script>
+        </div>
+    </div>
+</div>
+
+
+
 
 
                     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -425,46 +436,64 @@
                               
                 </div>
 
-                <h4 class="card-title mt-5">Guardian's Information</h4>
+               <h4 class="card-title mt-5">Guardian's Information</h4>
 
-                    <div class="row">
-                    
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Guardian Name</h4>
-                                        <div class="form-group">
-                                            <input type="text" name="gname" id="gname" class="form-control" placeholder="Enter Guardian's Name" required>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="row">
+    
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Guardian Name</h4>
+                <div class="form-group">
+                    <input type="text" name="gname" id="gname" class="form-control" placeholder="Enter Guardian's Name" required>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Relation</h4>
+                <div class="form-group">
+                    <select class="custom-select" name="grelation" id="grelation" required>
+                        <option value="">Select...</option>
+                        <option value="Father">Father</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Siblings">Siblings</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Relation</h4>
-                                        <div class="form-group">
-                                            <input type="text" name="grelation" id="grelation" required class="form-control" placeholder="Student's Relation with Guardian">
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Contact Number</h4>
+                <div class="form-group">
+                    <input type="text" name="gcontact" id="gcontact" required class="form-control" placeholder="Enter Guardian's Contact No." oninput="validatePhoneNumber(this)" maxlength="10">
+                    <span id="error-msg" style="color: red;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
 
+<script>
+    function validatePhoneNumber(input) {
+        var phoneNumber = input.value;
+        var errorMsg = document.getElementById("error-msg");
+        if (phoneNumber.length !== 10 || isNaN(phoneNumber)) {
+            errorMsg.textContent = "Please enter a 10-digit phone number";
+        } else {
+            errorMsg.textContent = "";
+        }
+    }
+</script>
 
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Contact Number</h4>
-                                        <div class="form-group">
-                                            <input type="text" name="gcontact" id="gcontact" required class="form-control" placeholder="Enter Guardian's Contact No.">
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
 
                     <h4 class="card-title mt-5">Current Address Information</h4>
 
