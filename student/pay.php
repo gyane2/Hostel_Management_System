@@ -130,7 +130,7 @@
                 <!-- Payment Button -->
                 <div class="row">
                     <div class="col-12">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Pay now<a href="http://localhost/HostelManagement-PHP/stripe/">Pay now</a></button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Payment<a href="http://localhost/HostelManagement-PHP/stripe/">Payment</a></button>
                     </div>
                 </div>
                 <!-- End Payment Button -->
