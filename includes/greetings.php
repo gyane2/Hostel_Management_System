@@ -1,28 +1,25 @@
 <?php 
- 
-    date_default_timezone_set('Nepal/Kathmanddu');
-    //Here we define out main variables 
-    $welcome_string="Welcome"; 
-    $numeric_date=date("G"); 
+    date_default_timezone_set('Asia/Kathmandu');
+    //Here we define our main variables 
+    $welcome_string = "Welcome"; 
+    $numeric_date = date("G"); 
     
     //Start conditionals based on military time 
-    if($numeric_date>=0&&$numeric_date<=11) 
-    $welcome_string="Good Morning,"; 
-    else if($numeric_date>=12&&$numeric_date<=17) 
-    $welcome_string="Good Afternoon,"; 
-    else if($numeric_date>=18&&$numeric_date<=23) 
-    $welcome_string="Good Evening,"; 
+    if ($numeric_date >= 0 && $numeric_date <= 11) 
+        $welcome_string = "Good Morning,"; 
+    else if ($numeric_date >= 12 && $numeric_date <= 17) 
+        $welcome_string = "Good Afternoon,"; 
+    else if ($numeric_date >= 18 && $numeric_date <= 23) 
+        $welcome_string = "Good Evening,"; 
 
-        $aid=$_SESSION['id'];
-        $ret="select * from userregistration where id=?";
-         $stmt= $mysqli->prepare($ret) ;
-         $stmt->bind_param('i',$aid);
-         $stmt->execute();
-         $res=$stmt->get_result();
+    $aid = $_SESSION['id'];
+    $ret = "SELECT * FROM userregistration WHERE id=?";
+    $stmt = $mysqli->prepare($ret);
+    $stmt->bind_param('i', $aid);
+    $stmt->execute();
+    $res = $stmt->get_result();
                                         
-         while($row=$res->fetch_object())
-         {
-    
-    echo "<h3 class='page-title text-truncate text-dark font-weight-medium mb-1'>$welcome_string $row->firstName! </h3>"; }
- 
+    while ($row = $res->fetch_object()) {
+        echo "<h3 class='page-title text-truncate text-dark font-weight-medium mb-1'>$welcome_string $row->firstName! </h3>"; 
+    }
 ?>
