@@ -160,7 +160,7 @@ header a{
     padding-right: 30%;
     box-sizing: border-box;
     color: #fff;
-    text-shadow: 0 5px 10px #0004;
+    text-shadow: 0 5px 15px #0004;
 }
 .carousel .list .item .author{
     font-weight: bold;
@@ -283,16 +283,16 @@ header a{
     }
 }
 .carousel .list .item:nth-child(1) .content .title{
-    animation-delay: 1.2s!important;
+    animation-delay: 1.8s!important;
 }
 .carousel .list .item:nth-child(1) .content .topic{
-    animation-delay: 1.4s!important;
+    animation-delay: 2.8s!important;
 }
 .carousel .list .item:nth-child(1) .content .des{
-    animation-delay: 1.6s!important;
+    animation-delay: 3.8s!important;
 }
 .carousel .list .item:nth-child(1) .content .buttons{
-    animation-delay: 1.8s!important;
+    animation-delay: 4.8s!important;
 }
 /* create animation when next click */
 .carousel.next .list .item:nth-child(1) img{
