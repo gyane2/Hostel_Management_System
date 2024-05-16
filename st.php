@@ -122,7 +122,11 @@
                                 </div>
                                 <div class="col-lg-12 text-center mt-5">
                                     
-                                   <a href="admin/index.php" class="text-danger">Go to Admin Panel</a>
+                                   <a href="admin/index.php" class="text-danger">Go to Admin Panel</a><br>
+                                   <br>
+                                   <a href="index.php" class="text-danger">Go Back</a>
+
+
                                 </div>
                             </div>
                         </form>
