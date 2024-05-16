@@ -1,129 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- *******  Link To CSS Style Sheet  ******* -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-	<!-- *******  Font Awesome Icons Link  ******* -->
-	<link rel="stylesheet" href="contact.css"/>
-
-	<!-- *******  Link To Goggle Fonts  *******  -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>Contact Section</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #6f6565;
+      
+    }
+    .contact-panel {
+      max-width: 1200px;
+      margin: 60px auto;
+      background-color: #ffefefcd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .contact-info {
+      margin-top: 20px;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .map-container {
+      margin-top: 20px;
+      height: 200px;
+      background-color: #ddd; /* Placeholder for map */
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-	<div class="container">
-		<main class="row">
-			
-			<!--  *******   Left Section (Column) Starts   *******  -->
+  <div class="contact-panel">
+    <h2>Contact Us</h2>
+    We're here to ensure your hostel management experience is seamless and hassle-free. Whether you have questions about our services, need technical support, or want to explore partnership opportunities, our team is ready to assist you every step of the way.
+    <div class="contact-info">
+       
+      <p><strong>Phone:</strong> +977 9821212332</p>
+      <p><strong>Email:</strong> <a href="mailto:alpen750@gmail.com">alpen750@gmail.com</a></p>
+      <p><strong>Address:</strong> Naxal, Kathmandu, Nepal</p>
+    </div>
+    <div class="map-container" id="map"></div>
+  </div>
 
-			<section class="col left">
-				
-				<!--  *******   Title Starts   *******  -->
+  <!-- Replace the 'YOUR_API_KEY' with your Google Maps API Key -->
+  <!-- Make sure you enable the Maps JavaScript API in your Google Cloud Console -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script>
+    function initMap() {
+  var mapOptions = {
+    center: {lat: 27.7172, lng: 85.3240}, // Kathmandu coordinates
+    zoom: 12
+  };
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
 
-				<div class="contactTitle">
-					<h2>Get In Touch</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-				</div>
-
-				<!--  *******   Title Ends   *******  -->
-
-				<!--  *******   Contact Info Starts   *******  -->
-
-				<div class="contactInfo">
-					
-					<div class="iconGroup">
-						<div class="icon">
-							<i class="fa-solid fa-phone"></i>
-						</div>
-						<div class="details">
-							<span>Phone</span>
-							<span>+00 110 111 00</span>
-						</div>
-					</div>
-
-					<div class="iconGroup">
-						<div class="icon">
-							<i class="fa-solid fa-envelope"></i>
-						</div>
-						<div class="details">
-							<span>Email</span>
-							<span>name.tutorial@gmail.com</span>
-						</div>
-					</div>
-
-					<div class="iconGroup">
-						<div class="icon">
-							<i class="fa-solid fa-location-dot"></i>
-						</div>
-						<div class="details">
-							<span>Location</span>
-							<span>X Street, Y Road, San Fransisco</span>
-						</div>
-					</div>
-
-				</div>
-
-				<!--  *******   Contact Info Ends   *******  -->
-
-				<!--  *******   Social Media Starts   *******  -->
-
-				<div class="socialMedia">
-					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-					<a href="#"><i class="fa-brands fa-twitter"></i></a>
-					<a href="#"><i class="fa-brands fa-instagram"></i></a>
-					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-				</div>
-
-				<!--  *******   Social Media Ends   *******  -->
-
-			</section>
-
-			<!--  *******   Left Section (Column) Ends   *******  -->
-
-			<!--  *******   Right Section (Column) Starts   *******  -->
-
-			<section class="col right">
-				
-				<!--  *******   Form Starts   *******  -->
-
-				<form class="messageForm">
-					
-					<div class="inputGroup halfWidth">
-						<input type="text" name="" required="required">
-						<label>Your Name</label>
-					</div>
-
-					<div class="inputGroup halfWidth">
-						<input type="email" name="" required="required">
-						<label>Email</label>
-					</div>
-
-					<div class="inputGroup fullWidth">
-						<input type="text" name="" required="required">
-						<label>Subject</label>
-					</div>
-
-					<div class="inputGroup fullWidth">
-						<textarea required="required"></textarea>
-						<label>Say Something</label>
-					</div>
-
-					<div class="inputGroup fullWidth">
-						<button>Send Message</button>
-					</div>
-
-				</form>
-
-				<!--  *******   Form Ends   *******  -->
-			</section>
-
-			<!--  *******   Right Section (Column) Ends   *******  -->
-
-		</main>
-	</div>
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
