@@ -107,7 +107,7 @@
                                     <button type="submit" name="login" class="btn btn-block btn-danger">LOGIN</button>
                                 </div>
                                 <div class="col-lg-12 text-center mt-5">
-                                <a href="../st.php" class="text-danger">Go To Student Pa</a><br>
+                                <a href="../st.php" class="text-danger">Go To Student Panel</a><br>
                                 <br>
                                    <a href="../index.php" class="text-danger">Go Back</a>
                                 </div>
